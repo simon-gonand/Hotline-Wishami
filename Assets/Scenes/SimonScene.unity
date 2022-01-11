@@ -1048,6 +1048,10 @@ PrefabInstance:
       propertyPath: bullets.Array.data[9]
       value: 
       objectReference: {fileID: 708296178}
+    - target: {fileID: 1799000362181490538, guid: b94e92b542e90a940bdf67f1908c5e13, type: 3}
+      propertyPath: preset
+      value: 
+      objectReference: {fileID: 11400000, guid: a56a39c5b2b29f4408fe3f142a048915, type: 2}
     - target: {fileID: 2692500630598793307, guid: b94e92b542e90a940bdf67f1908c5e13, type: 3}
       propertyPath: player
       value: 
