@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3295040356458381730
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9130057613689513130}
+  m_Layer: 0
+  m_Name: StartFirePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9130057613689513130
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3295040356458381730}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.626, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5171948867816823122}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7856210278598322057
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,6 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5036054474521245771}
+  - component: {fileID: 1296494233158962314}
   m_Layer: 0
   m_Name: BulletPoolManager
   m_TagString: Untagged
@@ -30,6 +61,27 @@ Transform:
   m_Father: {fileID: 5171948867816823122}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1296494233158962314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7856210278598322057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39bd1be71bf9a7b4596a378b7736ba7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabReference: {fileID: 7365755090442631519, guid: 9d4fdcfcf3b1abe4aafc55e0bf1ee4dc, type: 3}
+  bullets:
+  - {fileID: 0}
+  poolSize: 1
+  self: {fileID: 5036054474521245771}
+  player: {fileID: 1352945465}
+  startPoint: {fileID: 9130057613689513130}
+  foldoutBoolRef: 1
+  foldoutBoolPool: 1
 --- !u!1 &8508326766364252128
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,6 +95,8 @@ GameObject:
   - component: {fileID: 1352945465}
   - component: {fileID: 1352945466}
   - component: {fileID: 1799000362181490538}
+  - component: {fileID: 4097206983327926818}
+  - component: {fileID: 8278738701781820344}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -62,6 +116,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5036054474521245771}
+  - {fileID: 9130057613689513130}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -131,6 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   self: {fileID: 5171948867816823122}
   preset: {fileID: 11400000, guid: a56a39c5b2b29f4408fe3f142a048915, type: 2}
+  rb: {fileID: 4097206983327926818}
 --- !u!114 &1352945466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,6 +228,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 6748a96b-1a96-4b82-8981-903a653af406
     m_ActionName: Inputs/Movements[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1799000362181490538}
+        m_TargetAssemblyTypeName: PlayerAiming, Assembly-CSharp
+        m_MethodName: Fire
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4a671460-c460-4de5-bb4f-3f7141809357
+    m_ActionName: Inputs/Fire[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Inputs
@@ -190,3 +262,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   self: {fileID: 5171948867816823122}
+  bulletsPool: {fileID: 1296494233158962314}
+--- !u!50 &4097206983327926818
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8508326766364252128}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &8278738701781820344
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8508326766364252128}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

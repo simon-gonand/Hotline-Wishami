@@ -9,10 +9,14 @@ public class BulletPoolManager : MonoBehaviour
     public int poolSize;
     public Transform self;
 
+    public PlayerMovements player;
+    public Transform startPoint;
+
 #if UNITY_EDITOR
     public bool foldoutBoolRef;
     public bool foldoutBoolPool;
 #endif
+
 
     // Start is called before the first frame update
     void Start()

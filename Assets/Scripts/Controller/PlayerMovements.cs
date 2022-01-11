@@ -5,10 +5,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovements : MonoBehaviour
 {
+    public Transform self;
+    public PlayerPresets preset;
     [SerializeField]
-    private Transform self;
-    [SerializeField]
-    private PlayerPresets preset;
+    private Rigidbody2D rb;
 
     private Vector2 movementInputs;
 
@@ -24,8 +24,8 @@ public class PlayerMovements : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        self.Translate(movementInputs * preset.speed * Time.deltaTime);
+        rb.MovePosition(rb.position + movementInputs * preset.speed * Time.fixedDeltaTime);
     }
 }

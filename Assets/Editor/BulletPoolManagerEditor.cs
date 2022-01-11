@@ -10,6 +10,8 @@ public class BulletPoolManagerEditor : Editor
     SerializedProperty bullets;
     SerializedProperty prefabReference;
     SerializedProperty poolSize;
+    SerializedProperty player;
+    SerializedProperty startPoint;
 
     SerializedProperty foldoutBoolRef, foldoutBoolPool;
 
@@ -21,6 +23,8 @@ public class BulletPoolManagerEditor : Editor
         poolSize = serializedObject.FindProperty("poolSize");
         foldoutBoolRef = serializedObject.FindProperty("foldoutBoolRef");
         foldoutBoolPool = serializedObject.FindProperty("foldoutBoolPool");
+        player = serializedObject.FindProperty("player");
+        startPoint = serializedObject.FindProperty("startPoint");
 
         Undo.undoRedoPerformed += RebuildPool;
     }
@@ -53,12 +57,14 @@ public class BulletPoolManagerEditor : Editor
             GameObject go = PrefabUtility.InstantiatePrefab(prefabReference.objectReferenceValue as GameObject) as GameObject;
             Transform t = go.transform;
             t.SetParent(self.objectReferenceValue as Transform);
-            t.rotation = Quaternion.identity;
-            t.position = Vector3.zero;
+            t.localRotation = Quaternion.identity;
+            t.localPosition = Vector3.zero;
             go.SetActive(false);
 
+            Bullets bulletScript = go.GetComponent<Bullets>();
+            bulletScript.bulletPoolManager = target as BulletPoolManager;
             bullets.InsertArrayElementAtIndex(bullets.arraySize);
-            bullets.GetArrayElementAtIndex(bullets.arraySize - 1).objectReferenceValue = go.GetComponent<Bullets>();
+            bullets.GetArrayElementAtIndex(bullets.arraySize - 1).objectReferenceValue = bulletScript;
         }
 
         serializedObject.ApplyModifiedPropertiesWithoutUndo();
@@ -94,6 +100,8 @@ public class BulletPoolManagerEditor : Editor
             EditorGUI.indentLevel += 1;
             EditorGUILayout.PropertyField(self);
             EditorGUILayout.PropertyField(prefabReference);
+            EditorGUILayout.PropertyField(player);
+            EditorGUILayout.PropertyField(startPoint);
             EditorGUI.indentLevel -= 1;
         }
 
