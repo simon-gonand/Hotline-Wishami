@@ -206,6 +206,76 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1352945464 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8508326766364252128, guid: b94e92b542e90a940bdf67f1908c5e13, type: 3}
+  m_PrefabInstance: {fileID: 8338663028147172735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1352945465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352945464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2120b44a127701540bc8f3227811f2e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  self: {fileID: 1352945468}
+  preset: {fileID: 11400000, guid: a56a39c5b2b29f4408fe3f142a048915, type: 2}
+--- !u!114 &1352945466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352945464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 3b2045f49f6c20840a7092ea8479b770, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1352945465}
+        m_TargetAssemblyTypeName: PlayerMovements, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6748a96b-1a96-4b82-8981-903a653af406
+    m_ActionName: Inputs/Movements[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Inputs
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!4 &1352945468 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5171948867816823122, guid: b94e92b542e90a940bdf67f1908c5e13, type: 3}
+  m_PrefabInstance: {fileID: 8338663028147172735}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8338663028147172735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -213,6 +283,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4466707539333842783, guid: b94e92b542e90a940bdf67f1908c5e13, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466707539333842783, guid: b94e92b542e90a940bdf67f1908c5e13, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466707539333842783, guid: b94e92b542e90a940bdf67f1908c5e13, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5171948867816823122, guid: b94e92b542e90a940bdf67f1908c5e13, type: 3}
       propertyPath: m_RootOrder
       value: 1
