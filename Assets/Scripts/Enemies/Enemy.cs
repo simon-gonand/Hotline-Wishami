@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
     public AIPath path;
     public LayerMask layers;
 
+    public int earnScore;
+
     private void Update()
     {
         Vector3 direction = destination.target.position - self.position;
@@ -29,6 +31,7 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
+        ScoreManager.instance.AddScore(earnScore);
         Destroy(gameObject);
     }
 }

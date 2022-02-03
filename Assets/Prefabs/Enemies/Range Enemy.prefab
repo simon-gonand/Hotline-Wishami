@@ -183,6 +183,7 @@ MonoBehaviour:
   layers:
     serializedVersion: 2
     m_Bits: 63
+  earnScore: 650
   pool: {fileID: 6456323762985261682}
 --- !u!1 &6273221944467375607
 GameObject:
