@@ -17,15 +17,14 @@ public class PlayerMovements : MonoBehaviour
         movementInputs = context.ReadValue<Vector2>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movementInputs * preset.speed * Time.fixedDeltaTime);
+        Vector3 movement = rb.position + movementInputs * preset.speed * Time.fixedDeltaTime;
+        rb.MovePosition(movement);
+
+        Vector3 cameraPos = self.position;
+        cameraPos.z = Camera.main.transform.position.z;
+        Camera.main.transform.position = cameraPos;
     }
 }
