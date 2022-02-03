@@ -5,11 +5,7 @@ using Pathfinding;
 
 public class RangeEnemy : Enemy
 {
-    public Transform self;
-    public AIPath path;
-    public AIDestinationSetter destination;
     public BulletPoolManager pool;
-    public LayerMask layers;
 
     private bool canFire = true;
 
@@ -33,15 +29,11 @@ public class RangeEnemy : Enemy
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void PlayerSeen()
     {
+        base.PlayerSeen();
+
         Vector3 direction = destination.target.position - self.position;
-        RaycastHit2D raycast = Physics2D.Raycast(self.position, direction, direction.magnitude, layers);
-        if (!raycast.collider.CompareTag("Player"))
-        {
-            path.enableRotation = true;
-            return;
-        }
         path.enableRotation = false;
         direction.Normalize();
         float rot_z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
