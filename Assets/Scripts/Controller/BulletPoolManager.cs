@@ -9,7 +9,6 @@ public class BulletPoolManager : MonoBehaviour
     public int poolSize;
     public Transform self;
 
-    public PlayerMovements player;
     public Transform startPoint;
 
 #if UNITY_EDITOR
