@@ -242,6 +242,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b50ff2315be0543b77e11db543e032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destination: {fileID: 8610729083787241616}
+  self: {fileID: 8610729083787241618}
+  path: {fileID: 8610729083787241619}
+  layers:
+    serializedVersion: 2
+    m_Bits: 63
 --- !u!58 &8610729083787241613
 CircleCollider2D:
   m_ObjectHideFlags: 0
