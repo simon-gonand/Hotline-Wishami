@@ -29,7 +29,7 @@ public class RangeEnemy : Enemy
     }
 
     // Update is called once per frame
-    protected override void PlayerSeen()
+    public override void PlayerSeen()
     {
         base.PlayerSeen();
 

@@ -16,7 +16,10 @@ public class Bullets : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag(bulletPoolManager.self.parent.tag)) return;
-        if (collision.CompareTag("Player")) return;
+        if (collision.CompareTag("Player"))
+        {
+            // Game Over
+        }
         if (collision.CompareTag("Enemy")) 
         {
             collision.GetComponent<Enemy>().Die();

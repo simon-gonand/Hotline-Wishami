@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
         PlayerSeen();
     }
 
-    protected virtual void PlayerSeen()
+    public virtual void PlayerSeen()
     {
         path.enabled = true;
     }

@@ -13,6 +13,7 @@ public class PlayerAiming : MonoBehaviour
     private PlayerPresets preset;
 
     private bool allowShoot = true;
+    private bool firstShot = false;
 
     public void Fire(InputAction.CallbackContext context)
     {
@@ -25,6 +26,13 @@ public class PlayerAiming : MonoBehaviour
                 StartCoroutine(FireRateCooldown());
                 return;
             }
+        }
+        
+        if (firstShot) return;
+        firstShot = true;
+        foreach(Enemy enemy in LevelManager.instance.enemies)
+        {
+            enemy.PlayerSeen();
         }
     }
 
