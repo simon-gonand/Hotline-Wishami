@@ -9,6 +9,5 @@ public class PlayerPresets : ScriptableObject
     public float speed;
 
     [Header("Fire Stats")]
-    public float bulletSpeed;
     public float fireRate;
 }

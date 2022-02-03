@@ -13,12 +13,7 @@ public class PlayerAiming : MonoBehaviour
     private PlayerPresets preset;
 
     private bool allowShoot = true;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private bool firstShot = false;
 
     public void Fire(InputAction.CallbackContext context)
     {
@@ -31,6 +26,13 @@ public class PlayerAiming : MonoBehaviour
                 StartCoroutine(FireRateCooldown());
                 return;
             }
+        }
+        
+        if (firstShot) return;
+        firstShot = true;
+        foreach(Enemy enemy in LevelManager.instance.enemies)
+        {
+            enemy.PlayerSeen();
         }
     }
 
@@ -46,7 +48,7 @@ public class PlayerAiming : MonoBehaviour
     {
         Vector3 pos = Camera.main.WorldToScreenPoint(self.position);
         Vector3 direction = new Vector3(Mouse.current.position.ReadValue().x, Mouse.current.position.ReadValue().y, 0.0f) - pos;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float angle = -Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
 
         self.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }

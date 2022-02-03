@@ -5,14 +5,21 @@ using UnityEngine;
 public class Bullets : MonoBehaviour
 {
     public BulletPoolManager bulletPoolManager;
+    public Transform character;
     [SerializeField]
     private Transform self;
+
+    public float speed;
 
     private bool isActive = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player")) return;
+        if (collision.CompareTag(bulletPoolManager.self.parent.tag)) return;
+        if (collision.CompareTag("Player"))
+        {
+            // Game Over
+        }
         if (collision.CompareTag("Enemy")) 
         {
             collision.GetComponent<Enemy>().Die();
@@ -30,7 +37,7 @@ public class Bullets : MonoBehaviour
         gameObject.SetActive(true);
         self.SetParent(null);
         self.position = bulletPoolManager.startPoint.position;
-        self.right = bulletPoolManager.player.self.right;
+        self.right = character.up;
         isActive = true;
     }
 
@@ -48,7 +55,7 @@ public class Bullets : MonoBehaviour
     {
         if (isActive)
         {
-            self.position += self.right * bulletPoolManager.player.preset.bulletSpeed * Time.deltaTime;
+            self.position += self.right * speed * Time.deltaTime;
         }
     }
 }

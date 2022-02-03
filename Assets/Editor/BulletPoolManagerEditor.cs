@@ -10,7 +10,6 @@ public class BulletPoolManagerEditor : Editor
     SerializedProperty bullets;
     SerializedProperty prefabReference;
     SerializedProperty poolSize;
-    SerializedProperty player;
     SerializedProperty startPoint;
 
     SerializedProperty foldoutBoolRef, foldoutBoolPool;
@@ -23,7 +22,6 @@ public class BulletPoolManagerEditor : Editor
         poolSize = serializedObject.FindProperty("poolSize");
         foldoutBoolRef = serializedObject.FindProperty("foldoutBoolRef");
         foldoutBoolPool = serializedObject.FindProperty("foldoutBoolPool");
-        player = serializedObject.FindProperty("player");
         startPoint = serializedObject.FindProperty("startPoint");
 
         Undo.undoRedoPerformed += RebuildPool;
@@ -62,7 +60,9 @@ public class BulletPoolManagerEditor : Editor
             go.SetActive(false);
 
             Bullets bulletScript = go.GetComponent<Bullets>();
-            bulletScript.bulletPoolManager = target as BulletPoolManager;
+            BulletPoolManager targetScript = target as BulletPoolManager;
+            bulletScript.bulletPoolManager = targetScript;
+            bulletScript.character = targetScript.self.parent;
             bullets.InsertArrayElementAtIndex(bullets.arraySize);
             bullets.GetArrayElementAtIndex(bullets.arraySize - 1).objectReferenceValue = bulletScript;
         }
@@ -100,7 +100,6 @@ public class BulletPoolManagerEditor : Editor
             EditorGUI.indentLevel += 1;
             EditorGUILayout.PropertyField(self);
             EditorGUILayout.PropertyField(prefabReference);
-            EditorGUILayout.PropertyField(player);
             EditorGUILayout.PropertyField(startPoint);
             EditorGUI.indentLevel -= 1;
         }

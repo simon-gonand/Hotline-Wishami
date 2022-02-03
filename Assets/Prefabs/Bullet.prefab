@@ -99,7 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPoolManager: {fileID: 0}
+  character: {fileID: 0}
   self: {fileID: 1301265341121495791}
+  speed: 5
 --- !u!61 &-2882971875731379060
 BoxCollider2D:
   m_ObjectHideFlags: 0
