@@ -10,10 +10,19 @@ public class Bullets : MonoBehaviour
 
     private bool isActive = false;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.CompareTag("Player")) return;
+        if (collision.CompareTag("Enemy")) 
+        {
+
+        }
+        EndBehaviour();
+    }
+
+    private void OnBecameInvisible()
+    {
+        EndBehaviour();
     }
 
     public void StartBehaviour()
@@ -27,7 +36,7 @@ public class Bullets : MonoBehaviour
 
     public void EndBehaviour()
     {
-        self.SetParent(bulletPoolManager.player.self);
+        self.SetParent(bulletPoolManager.self);
         self.localPosition = Vector3.zero;
         self.localRotation = Quaternion.identity;
         gameObject.SetActive(false);

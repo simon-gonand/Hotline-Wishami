@@ -16,17 +16,4 @@ public class BulletPoolManager : MonoBehaviour
     public bool foldoutBoolRef;
     public bool foldoutBoolPool;
 #endif
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
