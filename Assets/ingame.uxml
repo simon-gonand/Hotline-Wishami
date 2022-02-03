@@ -1,0 +1,33 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement style="width: 100%; height: 100%; align-items: auto;">
+        <ui:VisualElement name="Paused" style="position: absolute; width: 60%; height: 60%; background-color: rgba(0, 0, 0, 0.41); top: 20%; left: 20%; align-items: center; justify-content: flex-start; border-left-color: rgba(0, 0, 0, 0.51); border-right-color: rgba(0, 0, 0, 0.51); border-top-color: rgba(0, 0, 0, 0.51); border-bottom-color: rgba(0, 0, 0, 0.51); border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; display: none;">
+            <ui:VisualElement style="width: 100%; height: 20%;">
+                <ui:Label text="Paused" display-tooltip-when-elided="true" style="-unity-font-definition: url(&apos;/Assets/Graphics/Fonts/discoduckv23di SDF.asset&apos;); font-size: 80%; -unity-text-align: upper-center; color: rgb(255, 245, 0); -unity-text-outline-color: rgb(255, 255, 255); text-shadow: 4px 0 0 rgb(255, 0, 0); -unity-text-outline-width: 0;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="width: 100%; height: 80%; justify-content: space-around; align-items: center;">
+                <UI.PlainButton.PlainButton name="Resume" style="width: auto; height: auto;">
+                    <ui:Label text="Resume" display-tooltip-when-elided="true" style="-unity-font-definition: url(&apos;/Assets/Graphics/Fonts/discoduckv23di SDF.asset&apos;); font-size: 50px;" />
+                </UI.PlainButton.PlainButton>
+                <UI.PlainButton.PlainButton name="ReturnToMenu" style="width: auto; height: auto;">
+                    <ui:Label text="Return To Menu" display-tooltip-when-elided="true" style="-unity-font-definition: url(&apos;/Assets/Graphics/Fonts/discoduckv23di SDF.asset&apos;); font-size: 50px;" />
+                </UI.PlainButton.PlainButton>
+                <UI.PlainButton.PlainButton name="Quit" style="width: auto; height: auto;">
+                    <ui:Label text="Quit Game" display-tooltip-when-elided="true" style="-unity-font-definition: url(&apos;/Assets/Graphics/Fonts/discoduckv23di SDF.asset&apos;); font-size: 50px;" />
+                </UI.PlainButton.PlainButton>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Header" style="align-items: auto; height: 10%; width: 100%; position: absolute;">
+            <ui:VisualElement name="Combo" style="align-items: flex-start; justify-content: center; height: 100%; width: auto; min-width: 30%;">
+                <ui:Label text="Combo : 00000" display-tooltip-when-elided="true" name="ComboLabel" style="font-size: 50%;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="PlayerInfo" style="align-items: flex-end; height: 10%; width: 100%; position: absolute; top: 90%; -unity-text-align: upper-left; flex-direction: row; justify-content: space-between;">
+            <ui:VisualElement name="Ammo" style="align-items: flex-start; justify-content: center; height: 100%; width: auto; min-width: 30%;">
+                <ui:Label text="Ammo : 0" display-tooltip-when-elided="true" enable-rich-text="true" name="AmmoLabel" style="font-size: 30px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Life" style="align-items: flex-start; justify-content: center; height: 100%; width: auto; min-width: 30%;">
+                <ui:ProgressBar title="100" high-value="1" tabindex="100" name="LifeBar" style="width: 100%; height: 100%; justify-content: center; align-items: stretch; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
