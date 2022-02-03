@@ -6,38 +6,38 @@
         </ui:VisualElement>
         <ui:VisualElement name="MainMenu" style="height: 75%; width: 100%; flex-direction: column-reverse; display: none;">
             <ui:VisualElement style="margin-bottom: 5%; margin-top: 0; margin-left: 0; margin-right: 0; height: 30%; flex-direction: row; align-items: center; justify-content: center;">
-                <ui:VisualElement class="ButtonContainer" style="width: 10%; height: 30%;">
-                    <UI.PlainButton.PlainButton name="Play">
-                        <ui:Label text="Play" display-tooltip-when-elided="true" />
+                <ui:VisualElement class="ButtonContainer" style="width: 25%; height: 30%;">
+                    <UI.PlainButton.PlainButton name="Play" style="-unity-font: url(&apos;/Assets/Graphics/Fonts/discoduckv23di.ttf&apos;);">
+                        <ui:Label text="Play" display-tooltip-when-elided="true" style="-unity-font: url(&apos;/Assets/Graphics/Fonts/discoduckv23di.ttf&apos;); -unity-font-definition: url(&apos;/Assets/Graphics/Fonts/discoduckv23di SDF.asset&apos;);" />
                     </UI.PlainButton.PlainButton>
                 </ui:VisualElement>
-                <ui:VisualElement class="ButtonContainer" style="width: 10%; height: 30%;">
+                <ui:VisualElement class="ButtonContainer" style="width: 25%; height: 30%;">
                     <UI.PlainButton.PlainButton name="Options">
-                        <ui:Label text="Options" display-tooltip-when-elided="true" />
+                        <ui:Label text="Options" display-tooltip-when-elided="true" style="-unity-font-definition: url(&apos;/Assets/Graphics/Fonts/discoduckv23di SDF.asset&apos;);" />
                     </UI.PlainButton.PlainButton>
                 </ui:VisualElement>
-                <ui:VisualElement class="ButtonContainer" style="width: 10%; height: 30%;">
+                <ui:VisualElement class="ButtonContainer" style="width: 25%; height: 30%;">
                     <UI.PlainButton.PlainButton name="Quit">
-                        <ui:Label text="Quit" display-tooltip-when-elided="true" />
+                        <ui:Label text="Quit" display-tooltip-when-elided="true" style="-unity-font-definition: url(&apos;/Assets/Graphics/Fonts/discoduckv23di SDF.asset&apos;);" />
                     </UI.PlainButton.PlainButton>
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="OptionsMenu" style="height: 75%; width: 100%; flex-direction: column; align-items: center; justify-content: center; display: flex;">
-            <ui:VisualElement name="OptionsSelector" style="margin-bottom: 5%; margin-top: 0; margin-left: 0; margin-right: 0; height: 70%; flex-direction: column; align-items: flex-end; justify-content: flex-start; width: 30%;">
+            <ui:VisualElement name="OptionsSelector" style="margin-bottom: 5%; margin-top: 0; margin-left: 0; margin-right: 0; height: 70%; flex-direction: column; align-items: flex-end; justify-content: flex-start; width: 40%;">
                 <ui:VisualElement style="width: 100%; height: 10%; justify-content: center; align-items: flex-start;">
-                    <ui:DropdownField label="Résolution :" index="0" choices="1920x1080,1600x900" name="Resolution" style="width: 100%;" />
+                    <ui:DropdownField label="Résolution :" index="0" choices="1920x1080,1600x900" name="Resolution" style="width: 100%; -unity-font-definition: url(&apos;/Assets/Graphics/Fonts/discoduckv23di SDF.asset&apos;);" />
                 </ui:VisualElement>
                 <ui:VisualElement style="width: 100%; height: 10%; justify-content: center; align-items: flex-start;">
-                    <ui:Slider picking-mode="Ignore" label="Sensibilité :" value="42" high-value="100" name="Sensibilite" style="width: 100%;" />
+                    <ui:Slider picking-mode="Ignore" label="Sensibilite :" value="42" high-value="100" name="Sensibilite" style="width: 100%; -unity-font-definition: url(&apos;/Assets/Graphics/Fonts/discoduckv23di SDF.asset&apos;);" />
                 </ui:VisualElement>
                 <ui:VisualElement style="width: 100%; height: 10%; justify-content: center; align-items: flex-start;">
-                    <ui:Toggle label="FullScreen :" name="FullScreen" value="false" />
+                    <ui:Toggle label="FullScreen :" name="FullScreen" value="false" style="-unity-font-definition: url(&apos;/Assets/Graphics/Fonts/discoduckv23di SDF.asset&apos;);" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement style="width: 30%; height: 10%; margin-bottom: 10%; justify-content: center; align-items: center;">
-                <UI.PlainButton.PlainButton name="ReturnToMainMenu" style="width: 50%;">
-                    <ui:Label text="Apply" display-tooltip-when-elided="true" />
+            <ui:VisualElement style="width: 30%; height: 20%; margin-bottom: 10%; justify-content: center; align-items: center;">
+                <UI.PlainButton.PlainButton name="ReturnToMainMenu" style="width: 100%;">
+                    <ui:Label text="Apply" display-tooltip-when-elided="true" style="-unity-font-definition: url(&apos;/Assets/Graphics/Fonts/discoduckv23di SDF.asset&apos;);" />
                 </UI.PlainButton.PlainButton>
             </ui:VisualElement>
         </ui:VisualElement>

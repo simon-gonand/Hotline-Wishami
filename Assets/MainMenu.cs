@@ -4,10 +4,21 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UI.PlainButton;
 using UnityEngine.InputSystem;
+
+
+public struct TempOptions
+{
+    public float sensibility;
+    public int ResolutionX;
+    public int ResolutionY;
+    public bool isFullScreen;
+}
+
 public class MainMenu : MonoBehaviour
 {
     UIDocument m_UIDocument;
     [SerializeField] Options s_options;
+    TempOptions tempOption;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +28,11 @@ public class MainMenu : MonoBehaviour
     // Update is called once per frame
     void OnEnable()
     {
+        tempOption = new TempOptions();
+        tempOption.sensibility = s_options.sensibility;
+        tempOption.ResolutionX = s_options.ResolutionX;
+        tempOption.ResolutionY = s_options.ResolutionY;
+
         m_UIDocument = GetComponent<UIDocument>();
         var root = m_UIDocument.rootVisualElement;
         PlainButton play = root.Q<PlainButton>("Play");
@@ -39,6 +55,8 @@ public class MainMenu : MonoBehaviour
         toggle.RegisterValueChangedCallback<bool>(v =>
         {
             s_options.isFullScreen = v.newValue;
+            Screen.SetResolution(s_options.ResolutionX, s_options.ResolutionY, s_options.isFullScreen);
+
         });
 
         DropdownField dropdown = root.Q<DropdownField>("Resolution");
@@ -47,8 +65,7 @@ public class MainMenu : MonoBehaviour
         {
             s_options.ResolutionX = int.Parse(v.newValue.Split('x')[0]);
             s_options.ResolutionY = int.Parse(v.newValue.Split('x')[1]);
-            Debug.Log(s_options.ResolutionX);
-            Debug.Log(s_options.ResolutionY);
+            Screen.SetResolution(s_options.ResolutionX, s_options.ResolutionY, s_options.isFullScreen);
         });
 
         Slider slide = root.Q<Slider>("Sensibilite");
@@ -77,12 +94,17 @@ public class MainMenu : MonoBehaviour
     }
     void Return()
     {
+        
         var root = m_UIDocument.rootVisualElement;
         Debug.Log("Return");
         VisualElement MainMenu = root.Q<VisualElement>("MainMenu");
         VisualElement OptionsMenu = root.Q<VisualElement>("OptionsMenu");
         OptionsMenu.style.display = DisplayStyle.None;
         MainMenu.style.display = DisplayStyle.Flex;
+        tempOption = new TempOptions();
+        tempOption.sensibility = s_options.sensibility;
+        tempOption.ResolutionX = s_options.ResolutionX;
+        tempOption.ResolutionY = s_options.ResolutionY;
     }
     void Quit()
     {
