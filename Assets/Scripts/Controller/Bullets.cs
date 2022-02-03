@@ -15,7 +15,7 @@ public class Bullets : MonoBehaviour
         if (collision.CompareTag("Player")) return;
         if (collision.CompareTag("Enemy")) 
         {
-
+            collision.GetComponent<Enemy>().Die();
         }
         EndBehaviour();
     }
