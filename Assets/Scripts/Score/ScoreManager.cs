@@ -38,6 +38,7 @@ public class ScoreManager : MonoBehaviour
         if (comboCoroutine != null)
             StopCoroutine(comboCoroutine);
         comboCoroutine = StartCoroutine(ComboCoroutine());
+        InGameUI.instance.ChangeScore(_score);
     }
 
 }

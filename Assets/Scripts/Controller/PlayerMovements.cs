@@ -28,7 +28,7 @@ public class PlayerMovements : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.velocity = Vector2.zero;
+        
         Vector3 movement = rb.position + movementInputs * preset.speed * Time.fixedDeltaTime;
         if (movementInputs != Vector2.zero)
         {
@@ -39,6 +39,7 @@ public class PlayerMovements : MonoBehaviour
         {
             bodyAnimator.SetFloat("Speed", 0);
             legsAnimator.SetFloat("Speed", 0);
+            rb.velocity = Vector3.zero;
         }
         rb.MovePosition(movement);
 
