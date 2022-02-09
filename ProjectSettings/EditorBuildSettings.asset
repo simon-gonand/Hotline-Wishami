@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SimonScene.unity
     guid: 2bbe951fa9ab26e4d89e92b5011fad04
+  - enabled: 1
+    path: Assets/Scenes/Intro-Outro/Outro.unity
+    guid: 31a6742fefe3eb04bab2f36df598a200
   m_configObjects: {}
