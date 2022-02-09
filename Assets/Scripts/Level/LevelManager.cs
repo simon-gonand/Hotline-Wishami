@@ -18,4 +18,19 @@ public class LevelManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void CheckIfEndLevel()
+    {
+        foreach(Enemy enemy in enemies)
+        {
+            if (enemy == null) enemies.Remove(enemy);
+        }
+        if (enemies.Count != 0) return;
+        EndLevel();
+    }
+
+    private void EndLevel()
+    {
+        Debug.Log("level finished");
+    }
 }

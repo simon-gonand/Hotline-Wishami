@@ -33,5 +33,6 @@ public class Enemy : MonoBehaviour
     {
         ScoreManager.instance.AddScore(earnScore);
         Destroy(gameObject);
+        LevelManager.instance.CheckIfEndLevel();
     }
 }
