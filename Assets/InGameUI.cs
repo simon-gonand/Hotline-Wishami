@@ -39,6 +39,21 @@ public class InGameUI : MonoBehaviour
 
     }
 
+    void ChangeScore(int score)
+    {
+        var root = m_UIDocument.rootVisualElement;
+        Label combo = root.Q<Label>("ComboLabel");
+        combo.text = "Combo : 00" + score;
+
+    }
+
+    void ChangeAmmo(int ammunation)
+    {
+        var root = m_UIDocument.rootVisualElement;
+        Label ammo = root.Q<Label>("AmmoLabel");
+        ammo.text = "Ammo : " + ammunation;
+    }
+
 
     void Resume()
     {
