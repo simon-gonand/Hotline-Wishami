@@ -168,6 +168,7 @@ MonoBehaviour:
     m_Bits: 63
   bodyAnim: {fileID: 4706596958589482301}
   legsAnim: {fileID: 1518714415051919132}
+  selfCollider: {fileID: 6273221944457693074}
   earnScore: 650
   pool: {fileID: 6456323762985261682}
 --- !u!1 &6273221944467375607

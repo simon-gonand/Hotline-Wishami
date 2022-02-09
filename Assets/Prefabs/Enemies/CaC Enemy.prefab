@@ -308,7 +308,7 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 0
   pickNextWaypointDist: 1.2
-  endReachedDistance: 1.7
+  endReachedDistance: 0.5
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -373,4 +373,5 @@ MonoBehaviour:
     m_Bits: 63
   bodyAnim: {fileID: 3963065112515570185}
   legsAnim: {fileID: 7140822779724218274}
+  selfCollider: {fileID: 8610729083787241615}
   earnScore: 500

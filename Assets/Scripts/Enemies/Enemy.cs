@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public LayerMask layers;
     public Animator bodyAnim;
     public Animator legsAnim;
+    public Collider2D selfCollider;
 
     public int earnScore;
     private bool isDead = false;
@@ -43,5 +44,6 @@ public class Enemy : MonoBehaviour
         legsAnim.enabled = false;
         isDead = true;
         destination.enabled = false;
+        selfCollider.enabled = false;
     }
 }

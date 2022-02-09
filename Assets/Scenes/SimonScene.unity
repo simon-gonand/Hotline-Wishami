@@ -2043,10 +2043,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8610729083787241619, guid: 3b13c96fb26199b49924567044e43aa0, type: 3}
-      propertyPath: endReachedDistance
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8610729083787241620, guid: 3b13c96fb26199b49924567044e43aa0, type: 3}
       propertyPath: m_Name
       value: CaC Enemy (1)
