@@ -6,6 +6,7 @@ public class Bullets : MonoBehaviour
 {
     public BulletPoolManager bulletPoolManager;
     public Transform character;
+
     [SerializeField]
     private Transform self;
 
