@@ -48,6 +48,11 @@ public class Bullets : MonoBehaviour
 
     public void EndBehaviour()
     {
+        if (bulletPoolManager == null)
+        {
+            Destroy(gameObject);
+            return;
+        }
         self.SetParent(bulletPoolManager.self);
         self.localPosition = Vector3.zero;
         self.localRotation = Quaternion.identity;
