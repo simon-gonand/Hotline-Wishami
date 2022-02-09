@@ -17,6 +17,10 @@ public class Bullets : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag(bulletPoolManager.self.parent.tag)) return;
+        if (collision.CompareTag("Barril"))
+        {
+            collision.GetComponent<Barril>().Explode();
+        }
         if (collision.CompareTag("Player"))
         {
             Camera.main.GetComponent<ShakeBehavior>().TriggerShake(0.1f);
@@ -24,10 +28,6 @@ public class Bullets : MonoBehaviour
         if (collision.CompareTag("Enemy")) 
         {
             collision.GetComponent<Enemy>().Die();
-        }
-        if (collision.CompareTag("Barril"))
-        {
-            collision.GetComponent<Barril>().Explode();
         }
         EndBehaviour();
     }
