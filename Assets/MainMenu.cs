@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UI.PlainButton;
-using UnityEngine.InputSystem;
-
+using UnityEngine.SceneManagement;
 
 public struct TempOptions
 {
@@ -81,6 +80,7 @@ public class MainMenu : MonoBehaviour
     void Play()
     {
         Debug.Log("Play");
+        SceneManager.LoadScene(1);
         // Change Level
     }
     void Options()
