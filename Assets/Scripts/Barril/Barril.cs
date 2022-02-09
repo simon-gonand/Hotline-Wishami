@@ -14,7 +14,7 @@ public class Barril : MonoBehaviour
             Enemy enemy = hit.collider.GetComponent<Enemy>();
             if (enemy != null) enemy.Die();
         }
-        Camera.main.GetComponent<ShakeBehavior>().TriggerShake(0.3f);
+        Camera.main.GetComponent<ShakeBehavior>().TriggerShake(0.5f);
         Destroy(gameObject);
     }
 

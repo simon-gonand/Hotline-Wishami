@@ -29,19 +29,20 @@ public class ShakeBehavior : MonoBehaviour
 
     void OnEnable()
     {
-        initialPosition = self.localPosition;
+        initialPosition = self.position;
     }
 
     void Update()
     {
         if (shakeDurationTimer > 0)
         {
-            self.localPosition = initialPosition + Random.insideUnitSphere * shakeMagnitude;
+            self.position = initialPosition + Random.insideUnitSphere * shakeMagnitude;
 
             shakeDurationTimer -= Time.deltaTime * dampingSpeed;
         }
         else if (shakeDurationTimer != 0.0f)
         {
+            Debug.Log(shakeDurationTimer);
             shakeDurationTimer = 0f;
             self.localPosition = initialPosition;
         }
@@ -50,7 +51,7 @@ public class ShakeBehavior : MonoBehaviour
     public void TriggerShake(float shakeDuration)
     {
         shakeDurationTimer = shakeDuration;
-        initialPosition = self.localPosition;
+        initialPosition = self.position;
     }
 
 }
