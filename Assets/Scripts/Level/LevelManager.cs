@@ -22,7 +22,6 @@ public class LevelManager : MonoBehaviour
     public void CheckIfEndLevel(Enemy enemy)
     {
         enemies.Remove(enemy);
-        Destroy(enemy.gameObject);
         if (enemies.Count != 0) return;
         EndLevel();
     }

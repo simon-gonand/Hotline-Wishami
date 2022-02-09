@@ -9,11 +9,17 @@ public class RangeEnemy : Enemy
 
     private bool canFire = true;
 
+    private void Start()
+    {
+        bodyAnim.SetBool("isDistance", true);
+    }
+
     private void Fire()
     {
         if (!canFire) return;
         foreach (Bullets bullet in pool.bullets)
         {
+            bodyAnim.SetTrigger("attack");
             if (bullet.gameObject.activeSelf) continue;
             bullet.StartBehaviour();
             StartCoroutine(FireRateCooldown());
