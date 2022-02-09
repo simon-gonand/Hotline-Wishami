@@ -19,12 +19,10 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void CheckIfEndLevel()
+    public void CheckIfEndLevel(Enemy enemy)
     {
-        foreach(Enemy enemy in enemies)
-        {
-            if (enemy == null) enemies.Remove(enemy);
-        }
+        enemies.Remove(enemy);
+        Destroy(enemy.gameObject);
         if (enemies.Count != 0) return;
         EndLevel();
     }

@@ -14,6 +14,15 @@ TextureImporter:
   - first:
       213: 29472482122040383
     second: player_weapon_rifle_fire
+  - first:
+      213: -779065699322248161
+    second: DeadBody1
+  - first:
+      213: 9051938048167361169
+    second: DeadBody2
+  - first:
+      213: -8553010959116671752
+    second: DeadBody3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -44,7 +53,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -80,7 +89,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -92,7 +101,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -132,7 +141,7 @@ TextureImporter:
         width: 160
         height: 160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -174,7 +183,7 @@ TextureImporter:
         width: 150
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -182,6 +191,69 @@ TextureImporter:
       bones: []
       spriteID: f34888bf015b86000800000000000000
       internalID: 29472482122040383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeadBody1
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 501
+        width: 195
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14c437cfd33035f0800000000000000
+      internalID: -779065699322248161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeadBody2
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 788
+        width: 262
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19abbd112b1fe9d70800000000000000
+      internalID: 9051938048167361169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeadBody3
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1573
+        width: 213
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4e3d539d99d4980800000000000000
+      internalID: -8553010959116671752
       vertices: []
       indices: 
       edges: []
