@@ -1,34 +1,25 @@
 fileFormatVersion: 2
-guid: 63892bbdd04b0d940897cdd092fbdbdc
+guid: 52234380a715e5b4495c8dae25f1730e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -996448767619895357
-    second: idle
+      213: 869762779325548650
+    second: Road1
   - first:
-      213: -8608211052607090270
-    second: walk1
+      213: -5391307981071726051
+    second: RoadMark
   - first:
-      213: 5480985055033815823
-    second: walk2
+      213: -3293433503042108997
+    second: RoadDark
   - first:
-      213: 919457412700178806
-    second: walk3
+      213: -8115037194750826008
+    second: whiteground
   - first:
-      213: -6431653024477841515
-    second: walk4
+      213: 6921521097408137175
+    second: wall
   - first:
-      213: 7813545942122199012
-    second: walk5
-  - first:
-      213: 2099303041921796465
-    second: walk6
-  - first:
-      213: -2162340875528648584
-    second: walk7
-  - first:
-      213: 531481726642067438
-    second: idle_gun
+      213: -2165821876479576607
+    second: door
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle
+      name: Road1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 80
-        height: 80
+        x: 145
+        y: 432
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cfe3211027eb22f0800000000000000
-      internalID: -996448767619895357
+      spriteID: a684e8cb3a4021c00800000000000000
+      internalID: 869762779325548650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk1
+      name: RoadMark
       rect:
         serializedVersion: 2
-        x: 80
-        y: 0
-        width: 80
-        height: 80
+        x: 50
+        y: 490
+        width: 3
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a153c9e7ad798880800000000000000
-      internalID: -8608211052607090270
+      spriteID: d1acd71a4f93e25b0800000000000000
+      internalID: -5391307981071726051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk2
+      name: RoadDark
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
-        width: 80
-        height: 80
+        x: 117
+        y: 389
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f03f3883ede501c40800000000000000
-      internalID: 5480985055033815823
+      spriteID: bb10ec7adaf5b42d0800000000000000
+      internalID: -3293433503042108997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk3
+      name: whiteground
       rect:
         serializedVersion: 2
-        x: 240
-        y: 0
-        width: 80
-        height: 80
+        x: 722
+        y: 735
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 679081635a192cc00800000000000000
-      internalID: 919457412700178806
+      spriteID: 8e96bcbaaa8916f80800000000000000
+      internalID: -8115037194750826008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk4
+      name: wall
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
-        width: 80
-        height: 80
+        x: 404
+        y: 562
+        width: 3
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5977e6d86ad2eb6a0800000000000000
-      internalID: -6431653024477841515
+      spriteID: 7d7426c24ce2e0060800000000000000
+      internalID: 6921521097408137175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk5
+      name: door
       rect:
         serializedVersion: 2
-        x: 400
-        y: 0
-        width: 80
-        height: 80
+        x: 404
+        y: 605
+        width: 3
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,71 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e7736ce2aa4f6c60800000000000000
-      internalID: 7813545942122199012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk6
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17945a97ef8322d10800000000000000
-      internalID: 2099303041921796465
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk7
-      rect:
-        serializedVersion: 2
-        x: 560
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 878cec62e62ddf1e0800000000000000
-      internalID: -2162340875528648584
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle_gun
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee79c1180d3306700800000000000000
-      internalID: 531481726642067438
+      spriteID: 1e53aa57a7471f1e0800000000000000
+      internalID: -2165821876479576607
       vertices: []
       indices: 
       edges: []

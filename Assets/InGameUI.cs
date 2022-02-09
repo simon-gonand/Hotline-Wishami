@@ -39,6 +39,12 @@ public class InGameUI : MonoBehaviour
 
     }
 
+    void ChangeScore(int score)
+    {
+        var root = m_UIDocument.rootVisualElement;
+        VisualElement Paused = root.Q<Label>("ComboLabel");
+    }
+    
 
     void Resume()
     {
