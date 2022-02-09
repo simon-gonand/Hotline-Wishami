@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
+
 
 public class PlayerMovements : MonoBehaviour
 {
@@ -11,6 +13,8 @@ public class PlayerMovements : MonoBehaviour
     private Rigidbody2D rb;
     public Animator bodyAnimator;
     public Animator legsAnimator;
+
+    public InGameUI doc;
 
     private Vector2 movementInputs;
 
@@ -24,6 +28,8 @@ public class PlayerMovements : MonoBehaviour
         if (context.performed)
         {
             //Open pause menu
+            doc.Pause();
+
         }
     }
 
@@ -31,6 +37,7 @@ public class PlayerMovements : MonoBehaviour
     {
         bodyAnimator.SetBool("Aiming", true);
         legsAnimator.SetBool("Aiming", true);
+
     }
 
     // Update is called once per frame

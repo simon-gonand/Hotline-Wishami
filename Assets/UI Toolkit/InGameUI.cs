@@ -60,10 +60,25 @@ public class InGameUI : MonoBehaviour
     }
 
 
+    public void Pause()
+    {
+        var root = m_UIDocument.rootVisualElement;
+        VisualElement Paused = root.Q<VisualElement>("Paused");
+        VisualElement Header = root.Q<VisualElement>("Header");
+        Header.style.display = DisplayStyle.Flex;
+        Paused.style.display = DisplayStyle.Flex;
+        Time.timeScale = 0.0f;
+    }
+
     void Resume()
     {
         // Call Game Manager to Resume Game
-
+        var root = m_UIDocument.rootVisualElement;
+        VisualElement Paused = root.Q<VisualElement>("Paused");
+        VisualElement Header = root.Q<VisualElement>("Header");
+        Header.style.display = DisplayStyle.Flex;
+        Paused.style.display = DisplayStyle.None;
+        Time.timeScale = 1.0f;
 
 
 
