@@ -10,4 +10,5 @@ public class PlayerPresets : ScriptableObject
 
     [Header("Fire Stats")]
     public float fireRate;
+    public int ammo;
 }

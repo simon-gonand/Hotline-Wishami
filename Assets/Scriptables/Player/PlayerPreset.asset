@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PlayerPreset
   m_EditorClassIdentifier: 
   speed: 5
-  bulletSpeed: 10
   fireRate: 0.2
+  ammo: 50
