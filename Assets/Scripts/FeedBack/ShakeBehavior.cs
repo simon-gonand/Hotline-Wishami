@@ -40,7 +40,7 @@ public class ShakeBehavior : MonoBehaviour
 
             shakeDurationTimer -= Time.deltaTime * dampingSpeed;
         }
-        else
+        else if (shakeDurationTimer != 0.0f)
         {
             shakeDurationTimer = 0f;
             self.localPosition = initialPosition;
@@ -50,6 +50,7 @@ public class ShakeBehavior : MonoBehaviour
     public void TriggerShake(float shakeDuration)
     {
         shakeDurationTimer = shakeDuration;
+        initialPosition = self.localPosition;
     }
 
 }
