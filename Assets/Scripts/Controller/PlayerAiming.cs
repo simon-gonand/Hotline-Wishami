@@ -12,11 +12,20 @@ public class PlayerAiming : MonoBehaviour
     [SerializeField]
     private PlayerPresets preset;
 
+    private int ammoNumber;
+
     private bool allowShoot = true;
     private bool firstShot = false;
 
+    private void Start()
+    {
+        ammoNumber = preset.ammo;
+        InGameUI.instance.ChangeAmmo(ammoNumber);
+    }
+
     public void Fire(InputAction.CallbackContext context)
     {
+        if (ammoNumber <= 0) return;
         if (context.performed && allowShoot)
         {
             foreach (Bullets bullet in bulletsPool.bullets)
@@ -24,6 +33,8 @@ public class PlayerAiming : MonoBehaviour
                 if (bullet.gameObject.activeSelf) continue;
                 bullet.StartBehaviour();
                 StartCoroutine(FireRateCooldown());
+                --ammoNumber;
+                InGameUI.instance.ChangeAmmo(ammoNumber);
                 return;
             }
         }
@@ -44,7 +55,7 @@ public class PlayerAiming : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 pos = Camera.main.WorldToScreenPoint(self.position);
         Vector3 direction = new Vector3(Mouse.current.position.ReadValue().x, Mouse.current.position.ReadValue().y, 0.0f) - pos;

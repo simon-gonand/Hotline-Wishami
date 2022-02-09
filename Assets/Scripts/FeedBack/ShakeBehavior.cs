@@ -5,11 +5,10 @@ using UnityEngine;
 public class ShakeBehavior : MonoBehaviour
 {
     // Transform of the GameObject you want to shake
-    private Transform transform;
+    private Transform self;
 
     // Desired duration of the shake effect
     private float shakeDurationTimer = 0f;
-    private float shakeDuration = 2f;
 
     // A measure of magnitude for the shake. Tweak based on your preference
     private float shakeMagnitude = 0.1f;
@@ -22,33 +21,33 @@ public class ShakeBehavior : MonoBehaviour
 
     void Awake()
     {
-        if (transform == null)
+        if (self == null)
         {
-            transform = GetComponent(typeof(Transform)) as Transform;
+            self = GetComponent(typeof(Transform)) as Transform;
         }
     }
 
     void OnEnable()
     {
-        initialPosition = transform.localPosition;
+        initialPosition = self.localPosition;
     }
 
     void Update()
     {
         if (shakeDurationTimer > 0)
         {
-            transform.localPosition = initialPosition + Random.insideUnitSphere * shakeMagnitude;
+            self.localPosition = initialPosition + Random.insideUnitSphere * shakeMagnitude;
 
-            shakeDuration -= Time.deltaTime * dampingSpeed;
+            shakeDurationTimer -= Time.deltaTime * dampingSpeed;
         }
         else
         {
             shakeDurationTimer = 0f;
-            transform.localPosition = initialPosition;
+            self.localPosition = initialPosition;
         }
     }
 
-    public void TriggerShake()
+    public void TriggerShake(float shakeDuration)
     {
         shakeDurationTimer = shakeDuration;
     }

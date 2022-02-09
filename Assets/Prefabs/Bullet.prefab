@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1301265341121495791
 Transform:
   m_ObjectHideFlags: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   bulletPoolManager: {fileID: 0}
   character: {fileID: 0}
   self: {fileID: 1301265341121495791}
-  speed: 5
+  speed: 10
 --- !u!61 &-2882971875731379060
 BoxCollider2D:
   m_ObjectHideFlags: 0

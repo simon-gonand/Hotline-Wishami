@@ -32,6 +32,8 @@ public class Enemy : MonoBehaviour
     public void Die()
     {
         ScoreManager.instance.AddScore(earnScore);
+        Camera.main.GetComponent<ShakeBehavior>().TriggerShake(0.1f);
         Destroy(gameObject);
+        LevelManager.instance.CheckIfEndLevel();
     }
 }

@@ -12,10 +12,15 @@ public class InGameUI : MonoBehaviour
     UIDocument m_UIDocument;
     [SerializeField] Options s_options;
     TempOptions tempOption;
-    // Start is called before the first frame update
-    void Start()
-    {
 
+    public static InGameUI instance;
+    // Start is called before the first frame update
+    void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
     }
 
     // Update is called once per frame
@@ -39,7 +44,7 @@ public class InGameUI : MonoBehaviour
 
     }
 
-    void ChangeScore(int score)
+    public void ChangeScore(int score)
     {
         var root = m_UIDocument.rootVisualElement;
         Label combo = root.Q<Label>("ComboLabel");
@@ -47,7 +52,7 @@ public class InGameUI : MonoBehaviour
 
     }
 
-    void ChangeAmmo(int ammunation)
+    public void ChangeAmmo(int ammunation)
     {
         var root = m_UIDocument.rootVisualElement;
         Label ammo = root.Q<Label>("AmmoLabel");
