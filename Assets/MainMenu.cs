@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using UI.PlainButton;
 using UnityEngine.InputSystem;
@@ -81,6 +82,7 @@ public class MainMenu : MonoBehaviour
     void Play()
     {
         Debug.Log("Play");
+        SceneManager.LoadScene(1);
         // Change Level
     }
     void Options()
