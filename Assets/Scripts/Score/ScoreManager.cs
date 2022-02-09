@@ -35,7 +35,6 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int scoreToAdd)
     {
         _score += Mathf.RoundToInt(scoreToAdd * currentMultiplicator);
-        Debug.Log(_score);
         if (comboCoroutine != null)
             StopCoroutine(comboCoroutine);
         comboCoroutine = StartCoroutine(ComboCoroutine());
