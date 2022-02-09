@@ -14,6 +14,12 @@ TextureImporter:
   - first:
       213: 4101913315106742625
     second: cars-sheet_3
+  - first:
+      213: -885105721542638000
+    second: cars-sheet_4
+  - first:
+      213: 8417735114168757591
+    second: cars-sheet_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,7 +117,7 @@ TextureImporter:
         width: 762
         height: 327
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 5, w: 0}
       outline: []
       physicsShape: []
@@ -132,7 +138,7 @@ TextureImporter:
         width: 707
         height: 341
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -153,7 +159,7 @@ TextureImporter:
         width: 802
         height: 341
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -174,7 +180,7 @@ TextureImporter:
         width: 628
         height: 309
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -182,6 +188,48 @@ TextureImporter:
       bones: []
       spriteID: 161e16e5d6cece830800000000000000
       internalID: 4101913315106742625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cars-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 2593
+        width: 750
+        height: 323
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05609c6290977b3f0800000000000000
+      internalID: -885105721542638000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cars-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 2575
+        width: 804
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d6c5dbc7dc1d470800000000000000
+      internalID: 8417735114168757591
       vertices: []
       indices: 
       edges: []
