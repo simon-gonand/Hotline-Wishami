@@ -42,7 +42,6 @@ public class ShakeBehavior : MonoBehaviour
         }
         else if (shakeDurationTimer != 0.0f)
         {
-            Debug.Log(shakeDurationTimer);
             shakeDurationTimer = 0f;
             self.localPosition = initialPosition;
         }
