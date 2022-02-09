@@ -19,7 +19,7 @@ public class Bullets : MonoBehaviour
         if (collision.CompareTag(bulletPoolManager.self.parent.tag)) return;
         if (collision.CompareTag("Player"))
         {
-            // Game Over
+            Camera.main.GetComponent<ShakeBehavior>().TriggerShake(0.1f);
         }
         if (collision.CompareTag("Enemy")) 
         {

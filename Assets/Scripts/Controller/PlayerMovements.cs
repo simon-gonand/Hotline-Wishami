@@ -28,6 +28,7 @@ public class PlayerMovements : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        rb.velocity = Vector2.zero;
         Vector3 movement = rb.position + movementInputs * preset.speed * Time.fixedDeltaTime;
         if (movementInputs != Vector2.zero)
         {
