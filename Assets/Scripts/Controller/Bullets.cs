@@ -25,6 +25,10 @@ public class Bullets : MonoBehaviour
         {
             collision.GetComponent<Enemy>().Die();
         }
+        if (collision.CompareTag("Barril"))
+        {
+            collision.GetComponent<Barril>().Explode();
+        }
         EndBehaviour();
     }
 

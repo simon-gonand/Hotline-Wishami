@@ -6,17 +6,16 @@ public class Barril : MonoBehaviour
 {
     public Transform self;
 
-    private void OnCollisionEnter(Collision collision)
+    public void Explode()
     {
-        if (collision.collider.CompareTag("Bullet"))
+        RaycastHit2D[] hits = Physics2D.CircleCastAll(new Vector2(self.position.x, self.position.y), 2.0f, Vector2.up);
+        foreach(RaycastHit2D hit in hits)
         {
-            Explode();
+            Enemy enemy = hit.collider.GetComponent<Enemy>();
+            if (enemy != null) enemy.Die();
         }
-    }
-
-    private void Explode()
-    {
-        Physics2D.CircleCastAll(new Vector2(self.position.x, self.position.y), 5.0f, Vector2.up);
+        Camera.main.GetComponent<ShakeBehavior>().TriggerShake(0.3f);
+        Destroy(gameObject);
     }
 
     // Start is called before the first frame update
